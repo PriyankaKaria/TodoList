@@ -1,5 +1,5 @@
 package com.company;
-//login and password
+//This class is used for login purpose of the user
 import java.util.Scanner;
 public class AccountLogger {
     private AccountMaker accountMaker;
