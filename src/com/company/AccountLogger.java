@@ -11,7 +11,7 @@ public class AccountLogger {
         this.accountMaker = accountMaker;
     }
 
-
+//user need enter username and password
     void inputLoginAndPassword() {
         System.out.print("Enter Username:");
         login = input.next();
