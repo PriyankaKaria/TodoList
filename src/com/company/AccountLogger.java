@@ -1,5 +1,5 @@
 package com.company;
-
+//login and password
 import java.util.Scanner;
 public class AccountLogger {
     private AccountMaker accountMaker;
