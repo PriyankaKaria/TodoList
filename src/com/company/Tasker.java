@@ -10,7 +10,7 @@ package com.company;
 public class Tasker {
     private Scanner input = new Scanner(System.in);
     private HashMap<String, ArrayList<ActionItem>>  projectsSpecificTasks = new HashMap<String, ArrayList<ActionItem>>();
-
+  //creating the task
     void createTask(ActionItem task, String project) {
         ArrayList<ActionItem>  listOfTasks = new ArrayList<ActionItem>() ;
         if (this.projectsSpecificTasks.keySet().contains(project)){
