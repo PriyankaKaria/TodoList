@@ -4,7 +4,7 @@ Todolist is the command line application for handling the tasks like adding, edi
 # REQUIREMENTS:
 ## ToDoList Application User Manual :
 
-  -ToDoList application has below major functions:
+  -> ToDoList application has below major functions:
  
   1.User Account (login and password)
   2.Add task
