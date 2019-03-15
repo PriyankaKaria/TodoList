@@ -11,7 +11,7 @@ Todolist is the command line application for handling the tasks like adding, edi
   3.Edit task
   4.Delete task
   5.Show all tasks
-  6.Save task
+  6. Set Status
   7. Exit
   
 ## 1. User Account
@@ -32,8 +32,11 @@ To delete task, show all the tasks, and give index for deleting the task.
 ## 5. Show all Tasks
 It will show all tasks with its each attribute.
 
+##6 Task Status
+Whether is done or not. If it is done, close it.
 
-## 6. Exit
+
+## 7. Exit
 Exit from the file.
 
 
