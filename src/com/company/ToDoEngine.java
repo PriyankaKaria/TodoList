@@ -5,7 +5,7 @@ import java.util.Scanner;
 import java.util.Date;
 
 public class ToDoEngine {
-
+//using scanner class to input data
     private Scanner input = new Scanner(System.in);
     private AccountMaker accountMaker = new AccountMaker();
     private AccountLogger accountLogger = new AccountLogger(accountMaker);
