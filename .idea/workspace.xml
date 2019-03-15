@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7327b61e-5291-4b37-913e-5a0d7959e280" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/com/company/AccountLoggerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/com/company/ActionItemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/com/company/ActionItemTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/AccountLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/AccountLogger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/AccountMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/AccountMaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/ActionItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/ActionItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Tasker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Tasker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/ToDoEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/ToDoEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/utils/ioutils/FileOprations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/utils/ioutils/FileOprations.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+            <state relative-caret-position="172">
+              <caret line="20" column="2" lean-forward="true" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -202,9 +191,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="822" />
+    <option name="x" value="20" />
+    <option name="y" value="43" />
+    <option name="width" value="1400" />
+    <option name="height" value="774" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -224,6 +214,11 @@
             <path>
               <item name="Todolist" type="b2602c69:ProjectViewProjectNode" />
               <item name="Todolist" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Todolist" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Todolist" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -231,13 +226,6 @@
               <item name="Todolist" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="company" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Todolist" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Todolist" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="ioutils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Todolist" type="b2602c69:ProjectViewProjectNode" />
@@ -261,7 +249,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552641865852" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552643415987" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -416,7 +404,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="806" extended-state="6" />
     <layout>
-      <window_info active="true" id="simpleUML" visible="true" weight="0.76824033" />
+      <window_info active="true" id="simpleUML" visible="true" weight="0.8769671" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.26037195" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
@@ -431,7 +419,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32968536" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.21008404" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.12184874" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32831737" />
@@ -565,8 +553,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+        <state relative-caret-position="172">
+          <caret line="20" column="2" lean-forward="true" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
