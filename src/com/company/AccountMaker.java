@@ -25,6 +25,7 @@ public class AccountMaker {
         Thread.sleep(2000);
     }
 
+
     HashMap<String, User> getLoginDetails() {
         return loginDetails;
     }

@@ -1,30 +1,62 @@
 package com.company;
 
+import java.util.Calendar;
 import java.util.Date;
+import java.text.SimpleDateFormat;
 
 public class ActionItem {
     private Date reminderOn;
     private Date deadLine;
     private String taskName;
+    private String taskStatus;
     private int taskPriority;
-    private enum taskStatus {
-        NEW,ONHOLD,CLOSED,OPEN,WAITING,PENDING;
-    };
+    private boolean isClosed;
+
+
+    public ActionItem(String taskName, int taskPriority, String Status ,Date reminderOn, Date deadLine) {
+        this.taskName = taskName;
+        this.taskPriority = taskPriority;
+        this.reminderOn = reminderOn;
+        this.deadLine = deadLine;
+        this.taskStatus=Status;
+    }
+
+
+    public String getTaskStatus() {
+        return taskStatus;
+    }
+
+    public void setTaskStatus(String taskStatus) {
+        this.taskStatus = taskStatus;
+    }
 
     @Override
     public String toString() {
         return "\t\t" + taskName +
                 "\t"+ taskPriority +
+                "\t"+ taskStatus +
                 "\t\t"+ reminderOn +
                 "\t\t" + deadLine ;
     }
 
-    public ActionItem(String taskName, int taskPriority, Date reminderOn, Date deadLine) {
-        this.taskName = taskName;
-        this.taskPriority = taskPriority;
-        this.reminderOn = reminderOn;
-        this.deadLine = deadLine;
-    }
+
+    @Override
+    public boolean equals(Object o)
+    {
+        if (! (o instanceof ActionItem) )
+            return false;
+        else
+        {
+            ActionItem otherItem = (ActionItem) o;
+            if (this.taskName.equals(otherItem.getTaskName()) && this.taskStatus.equals(otherItem.taskStatus)
+                    && (this.isClosed == otherItem.isClosed()) && this.taskPriority == otherItem.taskPriority
+                    && this.reminderOn.equals(otherItem.getReminderOn()) && this.deadLine.equals(otherItem.getdeadLine()))
+                return true;
+            else
+                return false;
+        }
+
+        }
 
 
     public String getTaskName() {
@@ -59,5 +91,15 @@ public class ActionItem {
         this.deadLine = deadLine;
     }
 
+    public String toCSVRow(){
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
+        return this.taskName+","+this.taskPriority+","+this.taskStatus+","+dateFormat.format(this.reminderOn)+","+dateFormat.format(this.deadLine);
+    }
+    public boolean isClosed() {
+        return isClosed;
+    }
 
+    public void setClosed(boolean closed) {
+        isClosed = closed;
+    }
 }

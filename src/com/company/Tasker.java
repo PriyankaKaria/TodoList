@@ -1,12 +1,14 @@
 package com.company;
 
-        import java.util.ArrayList;
-        import java.util.HashMap;
-        import java.util.Set;
+ import com.company.utils.ioutils.FileOprations;
+
+ import java.text.ParseException;
+ import java.text.SimpleDateFormat;
+ import java.util.*;
 
 
 public class Tasker {
-
+    private Scanner input = new Scanner(System.in);
     private HashMap<String, ArrayList<ActionItem>>  projectsSpecificTasks = new HashMap<String, ArrayList<ActionItem>>();
 
     void createTask(ActionItem task, String project) {
@@ -21,6 +23,52 @@ public class Tasker {
 
         listOfTasks.add(task);
         projectsSpecificTasks.put(project,listOfTasks);
+    }
+
+    public void editTask( String taskIndexString, String project) {
+
+        int taskIndex = Integer.parseInt(taskIndexString);
+        taskIndex=taskIndex-1;
+        System.out.println("Projects :"+this.projectsSpecificTasks);
+        ArrayList<ActionItem>  listOfTasks =this.projectsSpecificTasks.get(project);
+        System.out.println("listOfTasks "+listOfTasks);
+        try {
+            SimpleDateFormat format = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
+          ActionItem newActionItem =  listOfTasks.get(taskIndex);
+
+            System.out.println("Write down  New Name for Action Iem.");
+            String taskName =   input.nextLine();
+
+            System.out.println("Enter new value for Task Priority in numeric format. 1 for highest and bigger number for lowest");
+            String taskPriority =input.nextLine();
+            int priority= Integer.parseInt(taskPriority);
+
+             System.out.println("Enter  new value to be updated for Status");
+            String status=input.nextLine();
+
+            System.out.println("Enter  new value for Deadline in yyyy.MM.dd HH:mm:ss Format");
+            String date=input.nextLine();
+            Date taskDedaline = format.parse(date);
+
+            System.out.println("Enter the time when you want to be reminded in yyyy.MM.dd HH:mm:ss Format");
+            String taskReminder = input.nextLine();
+            Date reminderTime = format.parse(taskReminder);
+
+
+        newActionItem.setTaskName(taskName);
+        newActionItem.setTaskPriority(priority);
+        newActionItem.setdeadLine(taskDedaline);
+        newActionItem.setReminderOn(reminderTime);
+        newActionItem.setTaskStatus(status);
+        listOfTasks.remove(taskIndex);
+        listOfTasks.add(taskIndex,newActionItem);
+        System.out.println("Task Modified");
+    } catch (Exception e) {
+    e.printStackTrace();
+    }
+
+        this.projectsSpecificTasks.put(project,listOfTasks);
+
     }
 
     void deleteTask( int taskIndex, String project) {
@@ -45,5 +93,55 @@ public class Tasker {
 
     }
 
+    public void generateStreamForBackup(String fileName){
+        ArrayList<String> listOfTasks = new ArrayList<String> ();
+        Set<String> projects=this.projectsSpecificTasks.keySet();
+        for (String project : projects) {
+            ArrayList<ActionItem>   currentProjectTasks=  this.projectsSpecificTasks.get(project);
+            for (ActionItem item : currentProjectTasks) {
+                listOfTasks.add(project+","+item.toCSVRow());
+            }
+        }
+        FileOprations.writeCsvFile(listOfTasks,fileName);
+    }
+
+
+    public void restoreTasksforUser( String FileName){
+        FileOprations ioClient = new FileOprations();
+        SimpleDateFormat format = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
+
+        ArrayList<String> existingtasks = FileOprations.readCsvFile(FileName);
+         for (String existingTask : existingtasks ) {
+
+             String[] tokens = existingTask.split(",");
+             if (tokens.length == 5){
+                 try {
+                 String projectName= tokens[0];
+                 String taskName=tokens[1];
+                 int priority = Integer.parseInt(tokens[2]);
+                 String Status = tokens[3];
+                 Date deadline = format.parse(tokens[4]);
+                 Date reminder = format.parse(tokens[5]);
+                 this.createTask(new ActionItem(taskName,priority,Status,deadline,reminder),projectName);
+                 } catch (ParseException e) {
+                     e.printStackTrace();
+                 }
+
+             }
+         }
+    }
+
+ private boolean isNotEmpty(String input) {
+        if ( !input.equals( null) && !input.equals("") && ! (input == null)){
+            return true;
+        }else {
+            return false;
+        }
+ }
+
+    public HashMap<String, ArrayList<ActionItem>> getProjectsSpecificTasks()
+    {
+        return projectsSpecificTasks;
+    }
 
 }

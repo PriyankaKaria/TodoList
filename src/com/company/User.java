@@ -1,30 +1,40 @@
 package com.company;
 
 
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class User {
     private Tasker tasker;
     private String login;
     private String password;
 
-    User(String login, String password) {
+    public User(String login, String password) {
         this.login = login;
         this.password = password;
     }
 
-    User(Tasker tasks) {
+    public User(Tasker tasks) {
         this.tasker = tasks;
     }
 
-    void addNewTask(ActionItem task,String project) {
+    public void addNewTask(ActionItem task,String project) {
         tasker.createTask(task,project);
     }
 
-    void deleteTask(String taskIndex,String project) {
-    int index = Integer.parseInt(taskIndex);
+    public void deleteTask(String taskIndex,String project)
+    {
+         int index = Integer.parseInt(taskIndex);
         tasker.deleteTask(index,project);
     }
 
+    void editTask(String taskIndex, String projectName) {
+        tasker.editTask(taskIndex,projectName);
+    }
+    void restoreExistingTasks (String FileName) {
+        System.out.println("Restoring :"+FileName);
+        tasker.restoreTasksforUser(FileName);
+    }
     void showAllTasks() {
         tasker.showAllTasks();
     }
@@ -33,4 +43,16 @@ public class User {
         return password;
     }
 
+    public void backup(String fileName){
+        tasker.generateStreamForBackup(fileName);
+    }
+
+    /**
+     * this is just for testing
+     * @return
+     */
+    public HashMap<String, ArrayList<ActionItem>> getHashMap()
+    {
+        return tasker.getProjectsSpecificTasks();
+    }
 }
