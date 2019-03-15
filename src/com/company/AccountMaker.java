@@ -17,7 +17,7 @@ public class AccountMaker {
         System.out.print("Enter Password:");
         password = input.next();
     }
-
+    //creating account
     void createAccount() throws InterruptedException {
         User newUser = new User(login, password);
         loginDetails.put(login, newUser);
