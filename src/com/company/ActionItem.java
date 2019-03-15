@@ -21,11 +21,11 @@ public class ActionItem {
         this.taskStatus=Status;
     }
 
-
+//getting and seeting TaskStatus
     public String getTaskStatus() {
         return taskStatus;
     }
-
+    
     public void setTaskStatus(String taskStatus) {
         this.taskStatus = taskStatus;
     }
