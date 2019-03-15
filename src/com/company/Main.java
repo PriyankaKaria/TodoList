@@ -9,8 +9,8 @@ public class Main {
     public static void main(String[] args) {
         // write your code here
 
-        ToDoEngine engine = new ToDoEngine();
-        engine.displayMainMenu();
+        ToDoEngine engine = new ToDoEngine();  // creating object
+        engine.displayMainMenu(); //calling method
         engine.displayUserMenu();
 
     }
