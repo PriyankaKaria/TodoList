@@ -11,11 +11,11 @@ public class AccountLogger {
         this.accountMaker = accountMaker;
     }
 
-
+//getting login
     public String getUserLogin() {
             return this.login;
     }
-
+//inputting login and password
     public void inputLoginAndPassword() {
 
         System.out.print("Enter Username:");
