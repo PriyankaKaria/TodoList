@@ -58,12 +58,12 @@ public class FileOprations {
 
         } catch (FileNotFoundException e) {
           System.out.println("No Database found for user :"+fileName);
-        } /*catch (EOFException e) {
+        } catch (EOFException e) {
             System.out.println("The databse is empty");
-        }*/
+        }
         catch (IOException e) {
             e.printStackTrace();
-            System.out.println("No Database found for user :"+fileName);
+            System.out.println("No Database found for user :"+fileName + "Create New Database");
         }
 
 

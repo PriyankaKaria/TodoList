@@ -12,7 +12,7 @@ public class ToDoEngine {
     private boolean loopIsTrue = true;
     private Tasker tasks = new Tasker();
     private User user = new User(tasks);
-
+// display main menu
     void displayMainMenu() {
         System.out.println("What do you want to do?");
         System.out.println("1. Add Account 2. Log into my account 3. Exit");
@@ -64,11 +64,11 @@ public class ToDoEngine {
             }
         }
     }
-
+// displaying the menu
     public void displayUserMenu() {
         loopIsTrue = true;
         while (loopIsTrue) {
-            System.out.println("What do you wanna to do?");
+            System.out.println("What do you want to do?");
             System.out.println("1.Add Item 2. Show my ActionItems 3. Edit MyItem 4. Delete MyItems 5.Logout  6. Exit");
             getOptionsOfUserMenu(input.nextInt());
         }

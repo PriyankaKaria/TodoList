@@ -6,7 +6,7 @@ package com.company;
  import java.text.SimpleDateFormat;
  import java.util.*;
 
-
+//creates a task
 public class Tasker {
     private Scanner input = new Scanner(System.in);
     private HashMap<String, ArrayList<ActionItem>>  projectsSpecificTasks = new HashMap<String, ArrayList<ActionItem>>();
@@ -24,7 +24,7 @@ public class Tasker {
         listOfTasks.add(task);
         projectsSpecificTasks.put(project,listOfTasks);
     }
-
+// this code is for editing the task
     public void editTask( String taskIndexString, String project) {
 
         int taskIndex = Integer.parseInt(taskIndexString);
@@ -70,7 +70,7 @@ public class Tasker {
         this.projectsSpecificTasks.put(project,listOfTasks);
 
     }
-
+    //this code for deleting  the task
     void deleteTask( int taskIndex, String project) {
         System.out.println("Projects :"+this.projectsSpecificTasks);
         ArrayList<ActionItem>  listOfTasks =this.projectsSpecificTasks.get(project);
@@ -78,7 +78,7 @@ public class Tasker {
         listOfTasks.remove(taskIndex);
         this.projectsSpecificTasks.put(project,listOfTasks);
     }
-
+    // this code is for showing all the tasks
     void showAllTasks() {
         Set<String> projects = this.projectsSpecificTasks.keySet();
         System.out.println("Sr No. \t Project Name \t\t Task Name \tPriority \t Reminder \t\tDeadline");
@@ -93,6 +93,7 @@ public class Tasker {
 
     }
 
+    // generate stream for backup
     public void generateStreamForBackup(String fileName){
         ArrayList<String> listOfTasks = new ArrayList<String> ();
         Set<String> projects=this.projectsSpecificTasks.keySet();
@@ -105,7 +106,7 @@ public class Tasker {
         FileOprations.writeCsvFile(listOfTasks,fileName);
     }
 
-
+    // restore the data
     public void restoreTasksforUser( String FileName){
         FileOprations ioClient = new FileOprations();
         SimpleDateFormat format = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
@@ -130,7 +131,7 @@ public class Tasker {
              }
          }
     }
-
+// this is for testing
  private boolean isNotEmpty(String input) {
         if ( !input.equals( null) && !input.equals("") && ! (input == null)){
             return true;

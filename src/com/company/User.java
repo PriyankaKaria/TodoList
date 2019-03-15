@@ -3,7 +3,7 @@ package com.company;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-
+// this class is for getting the data of user
 public class User {
     private Tasker tasker;
     private String login;
@@ -17,7 +17,7 @@ public class User {
     public User(Tasker tasks) {
         this.tasker = tasks;
     }
-
+    //calling various methods to perform the tasks
     public void addNewTask(ActionItem task,String project) {
         tasker.createTask(task,project);
     }

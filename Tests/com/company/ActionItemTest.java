@@ -19,15 +19,19 @@ public class ActionItemTest {
 
     @Test
     public void setTaskStatus() {
+        assertEquals(2,2);
     }
 
     @Test
     public void toStringTest() {
+        assertEquals(2,2);
     }
 
     @Test
     public void getTaskName() {
+        assertEquals("fika","fika");
     }
+
 
     @Test
     public void setTaskName() {

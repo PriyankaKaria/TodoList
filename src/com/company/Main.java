@@ -1,7 +1,8 @@
 package com.company;
 
 import com.company.ToDoEngine;
-
+// this class is to run the whole program
+// calling display methods of Mainmenu and user main
 
 public class Main {
 

@@ -1,5 +1,5 @@
 package com.company;
-
+// this class is to add actionitem deatails
 import java.util.Calendar;
 import java.util.Date;
 import java.text.SimpleDateFormat;
@@ -58,7 +58,7 @@ public class ActionItem {
 
         }
 
-
+    // calling each method for getting the details of action item/ task
     public String getTaskName() {
         return taskName;
     }
